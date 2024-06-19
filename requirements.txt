@@ -1,0 +1,2 @@
+segno==1.6.1
+git+https://gitlab.com/drj11/pypng@pypng-0.20231004.0
