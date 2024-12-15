@@ -98,7 +98,7 @@ class Qr(kp.Plugin):
 		super().__init__()
 
 	def on_start(self):
-		pass
+		self.set_default_icon(self.load_icon('res://qrcode/qrcode.png'))
 
 	def _generate_dib_content(self, text):
 		qrcode = segno.make_qr(text)
@@ -211,7 +211,7 @@ class Qr(kp.Plugin):
 				target=COPY_TO_CLIPBOARD_TARGET,
 				args_hint=kp.ItemArgsHint.FORBIDDEN,
 				hit_hint=kp.ItemHitHint.IGNORE,
-				icon_handle=None
+				# icon_handle=None
 				# data_bag=image_uri
 			),
 			self.create_item(
@@ -221,7 +221,7 @@ class Qr(kp.Plugin):
 				target=OPEN_IMAGE_TARGET,
 				args_hint=kp.ItemArgsHint.FORBIDDEN,
 				hit_hint=kp.ItemHitHint.IGNORE,
-				icon_handle=None
+				# icon_handle=None
 				# data_bag=image_uri
 			)
 		])
